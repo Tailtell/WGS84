@@ -2,12 +2,6 @@
 ****
 一个提供了百度坐标（BD09）、国测局坐标（火星坐标，GCJ02）、和WGS84坐标系之间的转换的工具模块。
 
-python版本：https://github.com/wandergis/coordTransform_py
-
-命令行版本(支持模块或在命令行直接转换geojson数据)：https://github.com/wandergis/coordtransform-cli
-
-go语言社区版本：https://github.com/qichengzx/coordtransform
-
 ****
 
 ## 为什么写这个模块
