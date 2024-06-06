@@ -10,16 +10,6 @@ go语言社区版本：https://github.com/qichengzx/coordtransform
 
 ****
 
-### 喜欢请扫码
-关注DataV数据可视化公众号，获取更多知识
-
-<img src="https://img.alicdn.com/imgextra/i4/O1CN01pG1cIy1iLPnvfYhKm_!!6000000004396-0-tps-1280-1280.jpg" width="300px" height="300px" alt="DataV数据可视化公众号二维码">
-
-## **支持node、浏览器（AMD方式和直接引用方式）**
-- GitHub地址：https://github.com/wandergis/coordtransform
-- npm地址：https://www.npmjs.com/package/coordtransform
-- 项目主页：http://wandergis.github.io/coordtransform/
-
 ## 为什么写这个模块
 
 随着移动互联网的兴起，几乎每一个app都会去收集用户位置，如果恰好你在处理与地理定位相关的代码，并且不了解地理坐标系的话，肯定要被我大天朝各种坐标系搞晕。写这个模块的目的也是因为项目中app获取的坐标是百度sdk获取的，在做webgis可视化的时候各种偏，各种坐标不对，叠加错位。
@@ -53,11 +43,6 @@ go语言社区版本：https://github.com/qichengzx/coordtransform
     			当然只有百度地图
 		WGS84坐标系：
     			国际标准，谷歌国外地图、osm地图等国外的地图一般都是这个
-# 举个例子
-笔者所在的公司app使用的是百度的sdk,需要对定位坐标做web可视化效果，百度地图提供的js api满足不了需求，选用leaflet来做可视化，这里要说到百度地图了，它使用的坐标系和切图的原点都不一致，并且其加偏还是非线性的，因此无法利用常用的加载方法去加载，放弃使用它的底图，选用了符合标准的高德底图，高德底图使用的是国测局坐标也就是GCJ02坐标系，如果简单的将app获取的经纬度叠加上去，就有可能你本来在百度大厦的位置就显示在西二旗地铁站了甚至更远，因此需要将bd09转成gcj02坐标系，这个时候这个库就有了用武之地，对点批量转换再加载到底图上，就可以让点显示在本应该出现的位置。
-
-	另外如果你拿到了一些WGS84的坐标，想加载到各种底图上就可以根据这个库在底图坐标系和你的数据坐标系之间进行转换。希望对大家有用吧。
-
 ****
 
 
@@ -134,12 +119,5 @@ console.log(gcj02towgs84);
 - 批量转换
 - turf插件
 - leaflet插件
-
-### sometipes
-对于做GIS的人来说，底图对我们还是很重要的，有时候看国外的底图很好看，换上之后发现坐标位置全部不对，因此写了这个包帮助大家完成坐标的转换，方便大家的使用，喜欢的童鞋请star。
-
-### 友情推荐
-[蚂蚁开源基于 WebGL 的开源大规模地理空间数据可视分析引擎 L7](https://github.com/antvis/l7) 喜欢的童鞋请 star。
-
 
 
